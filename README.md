@@ -2,13 +2,13 @@
 Empresa de Jardinagem localizada em Águas Lindas-GO, Brasil
 
 <p align="center">
-  <img src="img/logo.png">
+  <img src="img/logo1.jpeg" width="300px" height="300px">
 </p>
 
 ---
 ## SOBRE O PROJETO
-Site web2 desenvolvido para a empresa de Jardinagem Almeida Gomes Paisagismo, localizada em Águas Lindas-GO, Brasil.
-Empresário: Manoel Gomes
+Site web2 desenvolvido para a empresa de Jardinagem Almeida Gomes Paisagismo do microempresário Manoel Gomes.
+
 
 ---
 ## CONECTE-SE COMIGO
@@ -103,11 +103,24 @@ Esses são apenas alguns dos comandos mais comuns do **Git** que você pode usar
 ---
 ## 3. RECURSOS UTILIZADOS NA PARTE VISUAL
 
-****
 <details>
 <summary>FONTS</summary>
 
   - [Google Fonts](https://fonts.google.com/)
+
+</details>
+
+<details>
+<summary>BOTÕES</summary>
+
+  - [Bootstrap](https://icons.getbootstrap.com/)
+
+</details>
+
+<details>
+<summary>GERADOR DE LINK DE WHATSAPP</summary>
+
+  - [Zap Convertte](https://zap.convertte.com.br/gerador-link-whatsapp/)
 
 </details>
 
