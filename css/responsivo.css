@@ -12,61 +12,14 @@
         width: 69%;
     }
 
-    .destaque p {
-        width: 70%;
-    }
-
     footer .logo-footer img {
         width: 30%;
-    }
-
-    .entre-em-contato-esquerda-heading {
-        font-size: 1.8rem;
-    }
-
-    .entre-em-contato-label {
-        font-size: 1.5rem;
-    }
-
-    .entre-em-contato-valor {
-        max-width: 17ch;
     }
 }
 
 @media (max-width:920px) {
     header .logo img {
         width: 45%;
-    }
-}
-
-@media (max-width:810px) {
-    .entre-em-contato {
-        flex-direction: column;
-    }
-
-    .entre-em-contato-direita {
-        border-radius: 0px 0px 8px 8px;
-    }
-
-    .entre-em-contato-esquerda {
-        justify-content: center;
-        align-items: center;
-        border-radius: 8px 8px 0px 0px;
-    }
-
-    .entre-em-contato-esquerda-container {
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-
-    .entre-em-contato-label {
-        text-align: center;
-    }
-
-    .entre-em-contato-valor {
-        max-width: 100%;
-        text-align: center;
     }
 }
 
@@ -101,15 +54,13 @@
         line-height: 3rem;
     }
 
-    .destaque h2 {
-        font-size: 3rem;
-        width: 100%;
-    }
+    #servicos h2 {
+    font-size: 3.5rem;
+    }  
 
-    .destaque p {
-        font-size: 1rem;
-        width: 60%;
-    }
+    #servicos .legenda-servicos {
+    font-size: 0.8rem;
+    } 
 
     #servicos .esquerda,
     #servicos .direita {
@@ -142,6 +93,21 @@
     #principios .principios-list div {
         width: 100%;
     }
+    #contato h2 {
+        font-size: 3.5rem;
+    }  
+
+    #contato .legenda-contato {
+        font-size: 0.8rem;
+    }
+
+    #contato .content {
+        flex-direction: column;
+    }
+
+    #contato img {
+        width: 70%;
+    }
 
     .final-content h2 {
         font-size: 1.8rem;
@@ -167,7 +133,6 @@
 @media (max-width:700px) {
     .final-content button {
         margin-top: -70px;
-        font-size: 1rem;
     }
 }
 
@@ -175,7 +140,6 @@
     .final-content button {
         padding: 10px 20px;
         margin-top: -50px;
-        font-size: 0.75rem;
     }
         footer .logo-footer img {
         width: 20%;
@@ -186,15 +150,6 @@
     .hero-content h1 {
         font-size: 3rem;
         line-height: 3.5rem;
-    }
-
-    .destaque h2 {
-        font-size: 2.3rem;
-        width: 100%;
-    }
-
-    .destaque p {
-        width: 80%;
     }
 
     #servicos img {
@@ -220,7 +175,6 @@
     .final-content button {
         margin-top: -40px;
         padding: 10px 30px;
-        font-size: 0.5rem;
     }
 
     footer .social-media .social-icons .icone {
@@ -271,10 +225,6 @@
         flex-wrap: wrap;
     }
 
-    .entre-em-contato-valor {
-        font-size: 1.2rem;
-    }
-
     .botao-wpp {
         padding: 5px 12px;
         font-size: 1.25rem;
@@ -303,7 +253,7 @@
 }
 
 @media (max-width:375px) {
-    #principios h2 {
+    #servicos h2, #principios h2 {
         font-size: 2.75rem;
     }
 }
@@ -331,14 +281,6 @@
         width: 100%;
     }
 
-    .destaque h2 {
-        font-size: 2rem;
-    }
-
-    .destaque p {
-        font-size: 0.8rem;
-    }
-
     #servicos .esquerda .conteudo-esquerda .titulo-esquerda h4,
     #servicos .direita .conteudo-direita .titulo-direita h4 {
         gap: 10px;
@@ -352,7 +294,7 @@
     }
 
     .final-content button {
-        padding: 5px 15px;
+        padding: 10px 15px;
     }
         footer .logo-footer img {
         width: 20%;

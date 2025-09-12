@@ -2,7 +2,7 @@
 Empresa de Jardinagem localizada em Águas Lindas-GO, Brasil
 
 <p align="center">
-  <img src="img/logo1.jpeg" width="300px" height="300px">
+  <img src="img/logo-escura-transparente.png" width="300px" height="300px">
 </p>
 
 ---
@@ -21,7 +21,7 @@ Site web2 desenvolvido para a empresa de Jardinagem Almeida Gomes Paisagismo do 
 
 ---
 ## AGRADECIMENTOS
-Ao Manoel Gomes pela confiança em nossos serviços. 
+Ao [Manoel Gomes](img/Cartao-de-Visita-Almeida-Gomes-Pasagismo.pdf) pela confiança em nossos serviços. 
 
 
 <br>

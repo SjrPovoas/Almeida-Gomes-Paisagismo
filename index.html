@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="format-detection" content="telephone=yes">
+    <meta name="format-detection" content="telephone=no">
     <title>Almeida Gomes Paisagismo</title>
-    <link rel="shortcut icon" href="img/logofavicon.jpeg">
+    <link rel="shortcut icon" href="img/favicon.png">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=DM+Sans:wght@400;700&amp;display=swap"
         rel="stylesheet">
@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/menu.css">
     <link rel="stylesheet" href="./css/responsivo.css">
+    <link rel="stylesheet" href="./css/animation.css">
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <meta name="description"
         content="Na Almeida Gomes Paisagismo oferecemos Um Serviço Confiável de Jardinagem, Manutenção e Coservação com Alta Qualidade.">
@@ -22,8 +23,9 @@
     <link rel="canonical" href="https://www.almeidagomespaisagismo.com.br/">
     <meta property="og:locale" content="pt_BR">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://almeida-gomes-paisagismo.vercel.app/img/logo.jpeg">
-    <meta property="og:title" content="Almeida Gomes Paisagismo | Empresa De Manutenção e Conservação de Jardinagem no DF">
+    <meta property="og:image" content="https://almeida-gomes-paisagismo.vercel.app/img/logo-escura.png">
+    <meta property="og:title"
+        content="Almeida Gomes Paisagismo | Empresa De Manutenção e Conservação de Jardinagem no DF">
     <meta property="og:description"
         content="Na Almeida Gomes Paisagismo oferecemos Um Serviço Confiável de Jardinagem, Manutenção e Coservação com Alta Qualidade.">
     <meta property="og:url" content="hhttps://www.almeidagomespaisagismo.com.br/">
@@ -38,11 +40,11 @@
     <header class="header">
         <div class="container">
             <div class="logo">
-                <a href="#"><img src="img/logo.png" alt="Logo Almeida Gomes Paisagismo"></a>
+                <a href="#"><img src="img/logo-escura-transparente.png" alt="Logo Almeida Gomes Paisagismo"></a>
             </div>
             <nav>
                 <div class="topo-menu">
-                    <img src="./img/hamburguer.svg" alt="Menu" class="menu-icon" id="menu-icon">
+                    <img src="./img/abrir-menu.png" alt="Menu" class="menu-icon" id="menu-icon">
                 </div>
                 <ul class="nav-links" id="nav-links">
                     <li class="home-no-menu"><a href="index.html" class="nav-item">HOME</a></li>
@@ -60,11 +62,10 @@
     </header>
 
     <section class="hero">
-        <img src="img/hero-bg.jpeg" alt="imagem principal Almeida Gomes Paisagismo">
+        <img src="img/hero-bg.png" alt="imagem principal Almeida Gomes Paisagismo">
         <div class="hero-content">
             <br>
-            <h1>HÁ MAIS DE 5<br>ANOS SERVINDO <br>COM EXCELÊNCIA</h1>
-            <!-- <button><a href="https://wa.me/+556198052164" target="_blank">ENTRE EM CONTATO</a></button> -->
+            <h1>&nbsp;<br>HÁ MAIS DE 5 ANOS SERVINDO <br>COM EXCELÊNCIA NO DF</h1>
         </div>
     </section>
 
@@ -83,12 +84,6 @@
                 <div class="slide">
                     <img src="./img/parceiro4.png" alt="Parceiro 4">
                 </div>
-                <!--<div class="slide">
-                    <img src="./img/parceiro5.png" alt="Parceiro 5">
-                </div>
-                <div class="slide">
-                    <img src="./img/parceiro6.png" alt="Parceiro 6">
-                </div>-->
                 <div class="slide">
                     <img src="./img/parceiro1.png" alt="Parceiro 1">
                 </div>
@@ -101,12 +96,6 @@
                 <div class="slide">
                     <img src="./img/parceiro4.png" alt="Parceiro 4">
                 </div>
-                <!--<div class="slide">
-                    <img src="./img/parceiro5.png" alt="Parceiro 5">
-                </div>
-                <div class="slide">
-                    <img src="./img/parceiro6.png" alt="Parceiro 6">
-                </div>-->
             </div>
         </div>
     </section>
@@ -140,10 +129,11 @@
         </div>
     </section>
 
-    <section id="servicos"> <!-- id="servicos" -->
+    <section id="servicos">
         <div class="container">
             <h2>COMPROMISSO COM<br><span class="highlight">QUALIDADE E SEGURANÇA</span>
-                <p>Oferecemos serviços essenciais para a conservação e a valorização de espaços urbanos e empresariais.
+                <p class="legenda-servicos">Oferecemos serviços essenciais para a conservação e a valorização de espaços
+                    urbanos e empresariais.
                 </p>
             </h2>
 
@@ -152,7 +142,7 @@
 
     <section id="servicos">
         <div class="container">
-            <div class="coluna"> <!-- lista de servicos -->
+            <div class="coluna">
                 <div class="esquerda">
                     <div class="conteudo-esquerda">
                         <div class="titulo-esquerda">
@@ -238,62 +228,19 @@
     </section>
 
     <section id="contato">
-
         <div class="container">
-            <div class="content">
-                <h2>CONTATO<br><span class="highlight"></h2>
-                <h3>PARA PROPOSTAS</span></h3>
-                <p>
-                <h4><a href="mailto:almeidagomespaisagismo@gmail.com" target="_blank"><i
-                            class="bi bi-envelope-at-fill">&nbsp;almeidagomespaisagismo@gmail.com</i></a></h4>
-                </p>
-                <p>
-                <h4><a href="tel:+5561999588869" target="_blank"><i class="bi bi-telephone-fill">&nbsp;(61)
-                            99958-8869</i></a></h4>
-                </p>
-            </div>
+            <h2>CONTATO <span class="highlight">PARA PROPOSTAS</h2>
+            <p class="legenda-contato">
+                <a href="mailto:almeidagomespaisagismo@gmail.com" target="_blank">
+                    <i class="bi bi-envelope-at-fill">&nbsp;almeidagomespaisagismo@gmail.com</i>
+                </a>
+            </p>
+            <p>
+                <a href="tel:061999588869" target="_blank">
+                    <i class="bi bi-telephone-fill">&nbsp;(61) 99958-8869</i>
+                </a>
+            </p>
         </div>
-        <!--<h3>Endereço para Visita</h3>
-            <p>Av. Marzação - Quadra 17 Lote 33 Jardim América II Águas. Lindas de Goiás-GO, Brasil</p>
-            </div>
-            <h2>SOLICITE SEU<br><span class="highlight">ORÇAMENTO</span></h2>
-            <div>
-                <form class="form" method="post" name="Formulario-Orcamento" aria-label="Formulario-Orcamento">
-                    <input type="hidden" name="post_id" value="6">
-                    <input type="hidden" name="form_id" value="487c058">
-                    <input type="hidden" name="referer_title"
-                        value="Empresa De Jardinagem Em Brasília DF | Almeida Gomes Paisagismo">
-                    <input type="hidden" name="queried_id" value="6">
-
-                    <div>
-                        <label> Nome </label>
-                        <input size="1" type="text" name="form_fields[name]" id="form-field-name" placeholder="Nome">
-                    </div>
-                    <div>
-                        <label> Email </label>
-                        <input size="1" type="email" name="form_fields[email]" id="form-field-email" placeholder="Email"
-                            required="required">
-                    </div>
-                    <div>
-                        <label> Telefone </label>
-                        <input size="1" type="tel" name="form_fields[field_0c3643a]" id="form-field-field_0c3643a"
-                            title="Only numbers and phone characters (#, -, *, etc) are accepted.">
-                    </div>
-                    <div>
-                        <label> Mensagem </label>
-                        <textarea name="form_fields[message]" id="form-field-message" rows="4"
-                            placeholder="Mensagem"></textarea>
-                    </div>
-                    <div>
-                        <button type="submit">
-                            <span>Solicitar orçamento </span>
-                        </button>
-                    </div>
-
-                </form>
-            </div>-->
-
-
     </section>
 
     <section class="final">
@@ -314,7 +261,7 @@
         <div class="container-footer">
             <div class="container-externo-social">
                 <div class="logo-footer">
-                    <a href="#"><img src="img/logo.png" alt="Logo Almeida Gomes Paisagismo"></a>
+                    <a href="#"><img src="img/logo-escura-transparente.png" alt="Logo Almeida Gomes Paisagismo"></a>
                 </div>
                 <div class="container-interno">
                     <div class="social-media">
@@ -379,6 +326,7 @@
         </div>
     </div>
 
+    <script src="js/index.js"></script>
 
 </body>
 
