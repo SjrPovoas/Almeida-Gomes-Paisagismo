@@ -1,10 +1,10 @@
 .menu-icon {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
     display: none;
     position: fixed;
-    top: 5px;
+    top: 25px;
     right: 25px;
     z-index: 2;
 }
@@ -18,7 +18,7 @@
 }
 
 .nav-links img {
-    width: 0%;
+    width: 10%;
 }
 
 .menu-logo.visible {
@@ -43,7 +43,7 @@
 
 .nav-links a {
     color: var(--cor-branca);
-    font-size: 18px;
+/*    font-size: 18px;*/
     transition: color 0.3s ease;
 }
 
@@ -63,12 +63,11 @@
         top: 0;
         right: -100%;
         width: 40%;
-        height: 90vh;
-        background: transparent;
+        height: 85%;
         border: 2px solid var(--cor-secundaria);
-        background-color: #334e3fab;
-        color:whitesmoke;
+        background-color: var(--cor-terciaria);
         border-radius: 0px 0px 0px 80px;
+        border-color: var(--cor-terciaria) var(--cor-terciaria) var(--cor-secundaria) var(--cor-secundaria);
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
@@ -87,19 +86,8 @@
 
     .nav-links li:not(:last-child) {
         margin: 15px 0;
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid whitesmoke;
         width: 80%;
         margin-left: 24px;
-    }
-}
-
-@media (max-width: 600px) {
-    .nav-links {
-        right: -100%;
-        background: transparent;
-        border: 2px solid var(--cor-secundaria);
-        background-color: #0000002c;
-        color:whitesmoke;
-        border-radius: 0px 0px 0px 80px;
     }
 }

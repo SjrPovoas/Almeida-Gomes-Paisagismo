@@ -2,12 +2,12 @@
 Empresa de Jardinagem localizada em Águas Lindas-GO, Brasil
 
 <p align="center">
-  <img src="img/logo-escura-transparente.png" width="300px" height="300px">
+  <img src="img/logo-escura.png" width="300px" height="300px">
 </p>
 
 ---
 ## SOBRE O PROJETO
-Site web2 desenvolvido para a empresa de Jardinagem Almeida Gomes Paisagismo do microempresário Manoel Gomes.
+Site web2 desenvolvido para a empresa de Jardinagem <a href="https://almeida-gomes-paisagismo.vercel.app" target="_blank">Almeida Gomes Paisagismo</a>.
 
 
 ---
@@ -21,8 +21,9 @@ Site web2 desenvolvido para a empresa de Jardinagem Almeida Gomes Paisagismo do 
 
 ---
 ## AGRADECIMENTOS
-Ao [Manoel Gomes](img/Cartao-de-Visita-Almeida-Gomes-Pasagismo.pdf) pela confiança em nossos serviços. 
-
+<div>
+  Ao <a href="https://almeida-gomes-paisagismo.vercel.app/img/Cartao-de-Visita-Almeida-Gomes-Pasagismo.pdf" target="_blank">Manoel Gomes</a> pela confiança em nossos serviços. 
+</div>
 
 <br>
 <br>
@@ -141,6 +142,7 @@ Esses são apenas alguns dos comandos mais comuns do **Git** que você pode usar
 <p>
 
 ---
+Última atualização: 13/09/2025 - 09:26
 <p align="center">
   &COPY; 2025 SjrPovoaS
 </p>

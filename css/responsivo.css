@@ -12,16 +12,16 @@
         width: 69%;
     }
 
-    footer .logo-footer img {
-        width: 30%;
-    }
+    /*footer .logo-footer img {
+        width: 2%;
+    }*/
 }
 
-@media (max-width:920px) {
+/*@media (max-width:920px) {
     header .logo img {
-        width: 45%;
+        width: 25%;
     }
-}
+}*/
 
 @media (max-width: 768px) {
     header nav ul {
@@ -30,9 +30,9 @@
         gap: 15px;
     }
 
-    header .container .logo img {
+    /*header .container .logo img {
         width: 35%;
-    }
+    }*/
     
 
     .hero-content h1 {
@@ -55,11 +55,11 @@
     }
 
     #servicos h2 {
-    font-size: 3.5rem;
+        font-size: 3.5rem;
     }  
 
     #servicos .legenda-servicos {
-    font-size: 0.8rem;
+        font-size: 1.2rem;
     } 
 
     #servicos .esquerda,
@@ -82,7 +82,7 @@
     }
 
     #principios .legenda-principios {
-        font-size: 0.8rem;
+        font-size: 1.2rem;
     }
 
     #principios .principios-list {
@@ -98,7 +98,7 @@
     }  
 
     #contato .legenda-contato {
-        font-size: 0.8rem;
+        font-size: 1.2rem;
     }
 
     #contato .content {
@@ -126,7 +126,7 @@
     }
 
     footer .social-media .social-icons .icone {
-        font-size: 1.3rem;
+        font-size: 2rem;
     }
 }
 
@@ -141,7 +141,7 @@
         padding: 10px 20px;
         margin-top: -50px;
     }
-        footer .logo-footer img {
+    footer .logo-footer img {
         width: 20%;
     }
 }
@@ -225,10 +225,10 @@
         flex-wrap: wrap;
     }
 
-    .botao-wpp {
+    /*.botao-wpp {
         padding: 5px 12px;
         font-size: 1.25rem;
-    }
+    }*/
 
     .menu-footer {
         display: flex;
@@ -256,10 +256,10 @@
     #servicos h2, #principios h2 {
         font-size: 2.75rem;
     }
-}
     footer .logo-footer img {
         width: 20%;
     }
+}
 
 @media (max-width:345px) {
     .hero-content h1 {
@@ -296,7 +296,7 @@
     .final-content button {
         padding: 10px 15px;
     }
-        footer .logo-footer img {
+    footer .logo-footer img {
         width: 20%;
     }
 }

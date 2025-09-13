@@ -525,6 +525,10 @@ footer .direitos-reservados p {
   font-family: var(--fonte-secundaria);
 }
 
+footer .direitos-reservados a:hover {
+  color: var(--cor-secundaria);
+}
+
 footer .menu-footer {
   display: flex;
   flex-direction: column;
@@ -598,7 +602,7 @@ footer a {
 .botao-wpp {
   padding: 10px 12px;
   background-color: #49E670;
-  border-radius: 50%;
+  border-radius: 80%;
   cursor: pointer;
   color: #fff;
   font-size: 2.5rem;
@@ -624,7 +628,6 @@ footer a {
   gap: 20px;
   z-index: 1000;
   padding: -0.5px;
-
   cursor: pointer;
   font-size: 3.5rem;
   transition: transform 0.2s ease;
