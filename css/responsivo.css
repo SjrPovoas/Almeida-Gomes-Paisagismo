@@ -161,8 +161,6 @@
         margin-top: -40px;
         padding: 10px 30px;
     }
-
-
 }
 
 @media (max-width:375px) {
@@ -205,9 +203,6 @@
     .final-content button {
         padding: 10px 15px;
     }
-    /*footer .logo-footer img {
-        width: 20%;
-    }*/
 
     footer .social-media .social-icons .icone {
         font-size: 1.2rem;
@@ -238,7 +233,6 @@
         display: flex;
         justify-content: left;
         align-items: center;
-        /*gap: 15px;*/
     }
 
     .endereco-telefone-footer {
@@ -247,8 +241,6 @@
         display: flex;
         justify-content: left;
         align-items: center;
-        /*margin: 5px 0;
-        padding: 10px 0;*/
     }
 
     footer .direitos-reservados {
@@ -275,6 +267,4 @@
         align-items: center;
         justify-content: center;
     }
-
-
 }
