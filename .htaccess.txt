@@ -1,0 +1,8 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTP_HOST} www.almeida-gomes-paisagismo.vercel.app
+RewriteRule (.*) https://almeida-gomes-paisagismo.vercel.app/$1 [R=301,L]
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www.almeida-gomes-paisagismo.vercel.app [NC]
+RewriteRule ^(.*)$ https://almeida-gomes-paisagismo.vercel.app/$1 [L,R=301]
+</IfModule>
