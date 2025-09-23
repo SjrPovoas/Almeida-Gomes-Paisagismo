@@ -4,14 +4,7 @@
     --cor-terciaria: #334e3f;
     --cor-texto: rgba(2,180,96);
     --cor-branca: #FFFFFF;
-    --cor-extra: #969F9E;
-    --cor-paleta1d4:#334e3f;
-    --cor-paleta2d4:rgba(137,198,69);
-    --cor-paleta3d4:rgba(2,180,96);
-    --cor-paleta4d4:rgba(115,172,69);
-}
-
+    --cor-extra: #969F9E;}
 :root {
     --fonte-primaria: 'Anton', sans-serif;
-    --fonte-secundaria: "DM Sans", sans-serif;
-}
+    --fonte-secundaria: "DM Sans", sans-serif;}
