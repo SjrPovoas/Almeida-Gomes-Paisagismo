@@ -231,7 +231,7 @@ header nav ul li a {
   border-radius: 10px;
 }
 
-#servicos h3, #servicos h4 {
+#servicos h3 {
   color: var(--cor-terciaria);
   font-size: 3rem;
 }
