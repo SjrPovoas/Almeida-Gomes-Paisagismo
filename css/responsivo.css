@@ -156,6 +156,7 @@
     .final-content button {
         margin-top: -40px;
         padding: 10px 30px;
+        font-size: 1rem;
     }
 }
 
@@ -198,6 +199,7 @@
 
     .final-content button {
         padding: 10px 15px;
+        font-size: 1rem;
     }
 
     footer .social-media .social-icons .icone {
