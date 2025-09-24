@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.almeida-gomes-paisagismo.vercel.app"
+        }
+      ],
+      "destination": "https://almeida-gomes-paisagismo.vercel.app/:path*",
+      "permanent": true
+    }
+  ]
+}
