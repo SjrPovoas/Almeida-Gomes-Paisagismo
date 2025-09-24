@@ -10,8 +10,6 @@ header {
   left: 0;
   z-index: 1000;
   transition: background 0.3s ease;}
-header.scrolled {
-  background: var(--cor-terciaria);}
 header .container {
   background-color: #123829d2;
   display: flex;
@@ -101,8 +99,7 @@ header nav ul li a {
   0% {
     transform: translateX(0);  }
   100% {
-    transform: translateX(calc(-250px * 6));}
-}
+    transform: translateX(calc(-250px * 6));}}
 /* Quem Somos */
 #quem-somos .container {
   padding: 80px 20px;
@@ -239,14 +236,6 @@ header nav ul li a {
   font-size: 1.1rem;
   margin-bottom: 30px;
   font-family: var(--fonte-secundaria);}
-#principios .container a {
-  text-decoration: none;
-  color: var(--cor-primaria);}
-#principios .container .seta-principios {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;}
 #principios .principios-list {
   display: flex;
   justify-content: space-around;
@@ -310,8 +299,6 @@ header nav ul li a {
   align-items: center;
   justify-content: center;
   margin-bottom: 5%;}
-.final-content .banner-final {
-  width: 80%;}
 .final-content button {
   background: var(--cor-terciaria);
   border: none;
@@ -360,8 +347,6 @@ footer .social-media .social-icons {
   align-items: center;
   justify-content: center;
   gap: 15px;}
-footer .social-media .social-icons .icone {
-  font-size: 2rem;}
 footer .direitos-reservados {
   display: flex;
   flex-direction: column;
@@ -388,10 +373,6 @@ footer a {
   padding-right: 20px;
   font-family: var(--fonte-secundaria);
   margin-left: 10px;}
-.sublinhado {
-  text-decoration: underline;}
-.nav-servicos {
-  cursor: pointer;}
 .whatsapp {
   position: fixed;
   display: flex;
