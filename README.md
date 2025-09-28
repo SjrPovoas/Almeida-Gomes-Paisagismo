@@ -2,7 +2,7 @@
 Empresa de Jardinagem localizada em Águas Lindas-GO, Brasil
 
 <p align="center">
-  <img src="img/logo-escura.png" width="300px" height="300px">
+  <img src="img/logo-escura.webp" width="300px" height="300px">
 </p>
 
 ---
