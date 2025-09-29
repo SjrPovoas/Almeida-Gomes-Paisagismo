@@ -5,10 +5,10 @@
       "has": [
         {
           "type": "host",
-          "value": "www.almeida-gomes-paisagismo.vercel.app"
+          "value": "www.almeidagomespaisagismo.vercel.app"
         }
       ],
-      "destination": "https://almeida-gomes-paisagismo.vercel.app/:path*",
+      "destination": "https://almeidagomespaisagismo.vercel.app/:path*",
       "permanent": true
     }
   ]
