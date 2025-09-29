@@ -7,7 +7,7 @@ Empresa de Jardinagem localizada em Águas Lindas-GO, Brasil
 
 ---
 ## SOBRE O PROJETO
-Site web2 desenvolvido para a empresa de Jardinagem <a href="https://almeida-gomes-paisagismo.vercel.app" target="_blank">Almeida Gomes Paisagismo</a>.
+Site web2 desenvolvido para a empresa de Jardinagem <a href="https://almeidagomespaisagismo.vercel.app" target="_blank">Almeida Gomes Paisagismo</a>.
 
 
 ---
@@ -22,7 +22,7 @@ Site web2 desenvolvido para a empresa de Jardinagem <a href="https://almeida-gom
 ---
 ## AGRADECIMENTOS
 <div>
-  Ao <a href="https://almeida-gomes-paisagismo.vercel.app/img/Cartao-de-Visita-Almeida-Gomes-Pasagismo.pdf" target="_blank">Manoel Gomes</a> pela confiança em nossos serviços. 
+  Ao <a href="https://almeidagomespaisagismo.vercel.app/img/Cartao-de-Visita-Almeida-Gomes-Pasagismo.pdf" target="_blank">Manoel Gomes</a> pela confiança em nossos serviços. 
 </div>
 
 <br>
@@ -31,11 +31,11 @@ Site web2 desenvolvido para a empresa de Jardinagem <a href="https://almeida-gom
 ---
 ## SUMÁRIO
 👋 Bem-vindo ao repositório!
-Se encontrar algum problema ou tiver alguma dúvida, por favor compartilhe conosco na aba [discussões/issues](https://github.com/SjrPovoas/Almeida-Gomes-Paisagismo/issues).
+Se encontrar algum problema ou tiver alguma dúvida, por favor compartilhe conosco na aba [discussões/issues](https://github.com/SjrPovoas/almeidagomespaisagismo/issues).
 
-1. [Configurando conexão VScode com Github](https://github.com/SjrPovoasAlmeida-Gomes-Paisagismo/#1-configurando-conexao-vscode-com-github)
-2. [Tecnologias Usadas](https://github.com/SjrPovoas/Almeida-Gomes-Paisagismo/#2-tecnologias-usadas)
-3. [Recursos Utilizados na parte Visual](https://github.com/SjrPovoas/Almeida-Gomes-Paisagismo/#3-recursos-utilizados-na-parte-visual)
+1. [Configurando conexão VScode com Github](https://github.com/SjrPovoas/almeidagomespaisagismo/#1-configurando-conexao-vscode-com-github)
+2. [Tecnologias Usadas](https://github.com/SjrPovoas/almeidagomespaisagismo/#2-tecnologias-usadas)
+3. [Recursos Utilizados na parte Visual](https://github.com/SjrPovoas/almeidagomespaisagismo/#3-recursos-utilizados-na-parte-visual)
 
 ---
 ## 1. CONFIGURANDO CONEXÃO VSCODE COM GITHUB
@@ -43,7 +43,7 @@ Se encontrar algum problema ou tiver alguma dúvida, por favor compartilhe conos
 **Para clonar esse Projeto, use:**
 
 ```
-  git clone https://github.com/SjrPovoas/Almeida-Gomes-Paisagismo.git
+  git clone https://github.com/SjrPovoas/almeidagomespaisagismo.git
 ```
 
 ### 1. Verifique a configuração do Git
@@ -142,7 +142,7 @@ Esses são apenas alguns dos comandos mais comuns do **Git** que você pode usar
 <p>
 
 ---
-Última atualização: 13/09/2025 - 09:26
+Última atualização: 29/09/2025 - 14:20
 <p align="center">
   &COPY; 2025 SjrPovoaS
 </p>
