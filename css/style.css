@@ -29,7 +29,8 @@ body {
 .container {
     margin: 0 auto;}
 button {
-    font-family: var(--fonte-primaria), sans-serif;}
+    font-family: var(--fonte-primaria), sans-serif;
+    margin: auto}
 /* ANIMATION - SCROLL EFFECTS */
 #quem-somos .container .content .equipe {animation: imgEquipe;animation-timeline: view(auto auto);}
 @Keyframes imgEquipe {
