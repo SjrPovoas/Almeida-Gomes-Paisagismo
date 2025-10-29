@@ -1,22 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-    xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset 
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+    xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+    <url>
+        <loc>https://almeidagomespaisagismo.vercel.app</loc>
+        <lastmod>2025-10-29</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        
+        <image:image>
+            <image:loc>https://almeidagomespaisagismo.vercel.app/img/hero-bg.png</image:loc>
+            <image:caption>Serviço de manutenção e conservação de áreas verdes no DF e Entorno.</image:caption>
+            <image:title>Almeida Gomes Paisagismo - Jardinagem e Poda de Árvores</image:title>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://almeidagomespaisagismo.vercel.app/img/equipe.jpeg</image:loc>
+            <image:caption>Jardineiro profissional realizando manutenção de área verde.</image:caption>
+            <image:title>Especialista em Manutenção e Conservação de Áreas Verdes</image:title>
+        </image:image>
+
+	    <image:image>
+            <image:loc>https://almeidagomespaisagismo.vercel.app/img/area-verde.png</image:loc>
+            <image:caption>Poda técnica e segura de árvores.</image:caption>
+            <image:title>MANUTENÇÃO DE ÁREA VERDE</image:title>
+        </image:image>
+
+        <image:image>
+            <image:loc>https://almeidagomespaisagismo.vercel.app/img/poda-arvore.png</image:loc>
+            <image:caption>Poda técnica e segura de árvores.</image:caption>
+            <image:title>PODA DE ÁRVORES</image:title>
+        </image:image>
+
+        <image:image>
+            <image:loc>https://almeidagomespaisagismo.vercel.app/img/corte-grama.png</image:loc>
+            <image:caption>Serviço de corte e roçada de grama com qualidade.</image:caption>
+            <image:title>CORTE DE GRAMA</image:title>
+        </image:image>
+
+		<image:image>
+            <image:loc>https://almeidagomespaisagismo.vercel.app/img/instalacao-grama.png</image:loc>
+            <image:caption>O conceito se concentra em criar um tapete verde resistente e agradável esteticamente, que demanda rega, adubação e controle de pragas e ervas daninhas para sua manutenção.</image:caption>
+            <image:title>INSTALAÇÃO DE GRAMA</image:title>
+        </image:image>
+
+        <image:image>
+            <image:loc>https://almeidagomespaisagismo.vercel.app/img/favicon.ico</image:loc>
+            <image:title>Logo Almeida Gomes Paisagismo</image:title>
+        </image:image>
+    </url>
     
-  	<url>
-		<loc>https://almeidagomespaisagismo.vercel.app/</loc>
-		<image:image>
-			<image:loc>https://almeidagomespaisagismo.vercel.app/img/logo-escura.webp</image:loc>
-			<image:title>Logo Escura Almeida Gomes Paisagismo</image:title>
-		</image:image>
-		<image:image>
-			<image:loc>https://almeidagomespaisagismo.vercel.app/img/logo-clara.webp</image:loc>
-			<image:title>Logo Clara Almeida Gomes Paisagismo</image:title>
-		</image:image>
-		<lastmod>2025-10-19T21:00:04+00:00</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.00</priority>
-	</url>
+    <url>
+        <loc>https://almeidagomespaisagismo.vercel.app/#servicos</loc>
+        <lastmod>2025-10-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://almeidagomespaisagismo.vercel.app/#quemsomos</loc>
+        <lastmod>2025-10-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://almeidagomespaisagismo.vercel.app/#principios</loc>
+        <lastmod>2025-10-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://almeidagomespaisagismo.vercel.app/#contato</loc>
+        <lastmod>2025-10-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
 
 </urlset>
