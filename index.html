@@ -749,6 +749,7 @@
       "@context": "https://schema.org",
       "@graph": [
         {
+          /* 1. WebSite */
           "@type": "WebSite",
           "url": "https://almeidagomespaisagismo.vercel.app",
           "name": "Almeida Gomes Paisagismo | Jardinagem | Manutenção DF e Entorno",
@@ -767,6 +768,7 @@
           }
         }, 
         {
+          /* 2. LocalBusiness (CORREÇÃO DE ADDRESS GARANTIDA) */
           "@type": "LocalBusiness",
           "name": "Almeida Gomes Paisagismo",
           "url": "https://almeidagomespaisagismo.vercel.app",
@@ -775,14 +777,17 @@
           "description": "Empresa especializada em manutenção de áreas verdes, jardinagem, poda de árvores e corte de grama no DF e Entorno, com foco em qualidade e sustentabilidade.",
           "telephone": "+5561999588869",
           "priceRange": "$$", 
+          
+          /* PROPRIEDADE ADDRESS CORRIGIDA */
           "address": { 
             "@type": "PostalAddress",
-            "streetAddress": "Quadra 30 Lote 10 Jardim América III", /* Hífen removido */
+            "streetAddress": "Quadra 30 Lote 10 Jardim América III -",
             "addressLocality": "Águas Lindas de Goiás",
             "postalCode": "72920-010",
             "addressRegion": "GO",
             "addressCountry": "BR"
           },
+          
           "areaServed": { 
             "@type": "State",
             "name": "Goiás"
@@ -809,6 +814,7 @@
           ]
         }, 
         {
+          /* 3. Serviço 1 (Manutenção) */
           "@type": "Service",
           "serviceType": "Manutenção de Área Verde",
           "name": "Serviço de Manutenção e Jardinagem",
@@ -820,6 +826,7 @@
           "url": "https://almeidagomespaisagismo.vercel.app/#servicos"
         },
         {
+          /* 4. Serviço 2 (Poda) */
           "@type": "Service",
           "serviceType": "Poda de Árvores",
           "name": "Serviço Profissional de Poda de Árvores",
@@ -831,6 +838,7 @@
           "url": "https://almeidagomespaisagismo.vercel.app/#servicos"
         },
         {
+          /* 5. Serviço 3 (Corte de Grama) */
           "@type": "Service",
           "serviceType": "Corte de Grama",
           "name": "Serviço de Corte de Grama e Roçada",
@@ -842,6 +850,7 @@
           "url": "https://almeidagomespaisagismo.vercel.app/#servicos"
         },
         {
+          /* 6. Serviço 4 (Instalação de Grama) */
           "@type": "Service",
           "serviceType": "Instalação de Grama",
           "name": "Serviço de Instalação de Grama",
