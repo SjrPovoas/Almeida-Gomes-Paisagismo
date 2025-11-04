@@ -7,7 +7,7 @@ Empresa de Jardinagem localizada em Águas Lindas-GO, Brasil
 
 ---
 ## SOBRE O PROJETO
-Site web2 desenvolvido para a empresa de Jardinagem <a href="https://almeidagomespaisagismo.vercel.app" target="_blank">Almeida Gomes Paisagismo</a>.
+Site web2 desenvolvido para a empresa de Jardinagem <a href="https://almeidagomespaisagismo.com.br" target="_blank">Almeida Gomes Paisagismo</a>.
 
 
 ---
@@ -22,7 +22,7 @@ Site web2 desenvolvido para a empresa de Jardinagem <a href="https://almeidagome
 ---
 ## AGRADECIMENTOS
 <div>
-  Ao <a href="https://almeidagomespaisagismo.vercel.app/img/Cartao-de-Visita-Almeida-Gomes-Pasagismo.pdf" target="_blank">Manoel Gomes</a> pela confiança em nossos serviços. 
+  Ao <a href="https://almeidagomespaisagismo.com.br/img/Cartao-de-Visita-Almeida-Gomes-Pasagismo.pdf" target="_blank">Manoel Gomes</a> pela confiança em nossos serviços. 
 </div>
 
 <br>
