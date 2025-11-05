@@ -552,6 +552,25 @@ header nav ul li a {
    color: var(--cor-primaria);}
 .final-content button a:hover {
   color: var(--cor-secundaria);}
+/* Seção Avaliação do Google */
+#avaliacao .final-content {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5%;
+  border: none;
+  margin-top: -15px;
+  padding: 15px 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background 0.3s;}
+#avaliacao .final-content a {
+  color: var(--cor-terciaria);}
+#avaliacao .final-content :hover {
+  background: var(--cor-texto);
+  color: var(--cor-secundaria);}
 /* Footer */
 footer {
   background: var(--cor-terciaria);
@@ -643,7 +662,7 @@ footer a {
   border-left: 20px solid var(--cor-primaria);
   z-index: 1;}
 .botao-wpp {
-  padding: 5px 13px;
+  padding: 4px 14px;
   background-color: #49E670;
   border-radius: 200%;
   cursor: pointer;
