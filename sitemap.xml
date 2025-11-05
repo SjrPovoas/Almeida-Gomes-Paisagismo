@@ -10,7 +10,7 @@
         <priority>1.0</priority>
         
         <image:image>
-            <image:loc>https://almeidagomespaisagismo.com.br/img/hero-bg.png</image:loc>
+            <image:loc>https://almeidagomespaisagismo.com.br/img/hero-bg.webp</image:loc>
             <image:caption>Serviço de manutenção e conservação de áreas verdes no DF e Entorno.</image:caption>
             <image:title>Almeida Gomes Paisagismo - Jardinagem e Poda de Árvores</image:title>
         </image:image>
@@ -28,7 +28,7 @@
         </image:image>
 
         <image:image>
-            <image:loc>https://almeidagomespaisagismo.com.br/img/poda-arvore.png</image:loc>
+            <image:loc>https://almeidagomespaisagismo.com.br/img/poda-arvore.webp</image:loc>
             <image:caption>Poda técnica e segura de árvores.</image:caption>
             <image:title>PODA DE ÁRVORES</image:title>
         </image:image>
