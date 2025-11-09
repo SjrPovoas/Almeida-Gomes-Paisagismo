@@ -5,10 +5,10 @@
       "has": [
         {
           "type": "host",
-          "value": "almeidagomespaisagismo.vercel.app" // Corrigido (sem 'www.')
+          "value": "almeidagomespaisagismo.vercel.app"
         }
       ],
-      "destination": "https://almeidagomespaisagismo.com.br/:path*", // Corrigido o destination para passar o caminho adiante
+      "destination": "https://almeidagomespaisagismo.com.br/:path*",
       "permanent": true
     },
     {
