@@ -21,7 +21,7 @@
             <image:title>Especialista em Manutenção e Conservação de Áreas Verdes</image:title>
         </image:image>
 
-	    <image:image>
+        <image:image>
             <image:loc>https://almeidagomespaisagismo.com.br/img/area-verde.png</image:loc>
             <image:caption>Poda técnica e segura de árvores.</image:caption>
             <image:title>MANUTENÇÃO DE ÁREA VERDE</image:title>
@@ -39,44 +39,11 @@
             <image:title>CORTE DE GRAMA</image:title>
         </image:image>
 
-		<image:image>
+        <image:image>
             <image:loc>https://almeidagomespaisagismo.com.br/img/instalacao-grama.png</image:loc>
             <image:caption>O conceito se concentra em criar um tapete verde resistente e agradável esteticamente, que demanda rega, adubação e controle de pragas e ervas daninhas para sua manutenção.</image:caption>
             <image:title>INSTALAÇÃO DE GRAMA</image:title>
         </image:image>
-
-        <image:image>
-            <image:loc>https://almeidagomespaisagismo.com.br/img/favicon.ico</image:loc>
-            <image:title>Logo Almeida Gomes Paisagismo</image:title>
-        </image:image>
-    </url>
-    
-    <url>
-        <loc>https://almeidagomespaisagismo.com.br/#servicos</loc>
-        <lastmod>2025-11-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>https://almeidagomespaisagismo.com.br/#quemsomos</loc>
-        <lastmod>2025-11-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    
-    <url>
-        <loc>https://almeidagomespaisagismo.com.br/#principios</loc>
-        <lastmod>2025-11-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-
-    <url>
-        <loc>https://almeidagomespaisagismo.com.br/#contato</loc>
-        <lastmod>2025-11-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-
+        
+        </url>
 </urlset>
