@@ -1038,3 +1038,74 @@ footer a {
   transition: background-color 0.3s ease; }
 .cta-carrossel:hover {
   background-color: #4cae4c; }
+/* ===  ESTILOS PARA A SEÇÃO DE VÍDEO (DICAS) ==== */
+  .container-video {
+      /* Espaçamento e fundo para destacar a seção */
+      padding: 60px 0;
+      text-align: center;
+      background-color: #f8f8f8; /* Cor de fundo suave */
+  }
+  /* Estilo para a Headline do Vídeo */
+  .headline-video {
+      font-size: 2.5em;
+      color: #333;
+      margin-bottom: 10px;
+      font-weight: 700;   }
+  /* Estilo para o Sub-título da Headline */
+  .headline-video span.sub-headline {
+      display: block;
+      font-size: 0.7em; 
+      color: #5cb85c; /* Cor verde para destaque */
+      font-weight: 400;
+      margin-top: 5px;   }
+  /* Wrapper principal do vídeo para centralização e sombra */
+  .video-wrapper {
+      max-width: 700px; /* Limita a largura máxima do player */
+      margin: 30px auto 0; /* Centraliza horizontalmente */
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+      border-radius: 8px;
+      overflow: hidden; /* Garante cantos arredondados */
+  }
+  /* O elemento VIDEO em si */
+  .video-jardim {
+      width: 100%;
+      height: 80%;
+      display: block;   }
+  /* Container do botão de Chamada para Ação abaixo do vídeo */
+  .cta-video-bottom {
+      padding: 20px;
+      background-color: #ffffff;
+      border-top: 1px solid #eee; /* Linha sutil de separação */
+  }
+  .cta-video-bottom p {
+      font-size: 1.1em;
+      margin-bottom: 15px;
+      color: #555;   }
+  /* Estilo do Botão Principal (WhatsApp) */
+  .cta-principal-video {
+      display: inline-flex;
+      align-items: center;
+      background-color: #25D366; /* Verde WhatsApp */
+      color: var(--cor-branca);
+      text-decoration: none;
+      padding: 12px 30px;
+      border-radius: 50px; /* Botão arredondado */
+      font-size: 1.1em;
+      transition: background-color 0.3s ease;
+      text-transform: uppercase; }
+  .cta-principal-video:hover {
+      background-color: #128C7E;
+      color: var(--cor-secundaria); }
+  .cta-principal-video i {
+      margin-right: 8px;
+      font-size: 1.2em; }
+  /* Responsividade Básica */
+  @media (max-width: 768px) {
+      .headline-video {
+          font-size: 1.8em; }
+      .headline-video span.sub-headline {
+          font-size: 0.8em; }
+      .cta-principal-video {
+          width: 90%; /* Ocupa quase a largura total em telas menores */
+          justify-content: center; }
+  }
