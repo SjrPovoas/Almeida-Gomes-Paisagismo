@@ -27,8 +27,12 @@
       "destination": "/robots.txt"
     },
     {
-        "source": "/:path*",
-        "destination": "/" 
+      "source": "/galeria-venda-plantas",
+      "destination": "/galeria-venda-plantas.html"
+    },
+    {
+      "source": "/:path((?!\\.).*)", 
+      "destination": "/" 
     }
   ]
 }
