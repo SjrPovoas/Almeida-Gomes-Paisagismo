@@ -639,7 +639,7 @@ header nav ul li a {
   color: var(--cor-primaria);}
 .final-content button:hover {
   background: var(--cor-texto);
-   color: var(--cor-primaria);}
+  color: var(--cor-primaria);}
 .final-content button a:hover {
   color: var(--cor-secundaria);}
 /* Seção Avaliação do Google */
