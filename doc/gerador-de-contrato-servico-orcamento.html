@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -35,7 +34,7 @@
             font-family: 'Inter', sans-serif;
         }
 
-        /* Cores inspiradas no site da Almeida Gomes Paisagismo (Verde profundo e branco) */
+        /* Cores inspiradas no branding */
         .agp-text-green {
             color: #0b4e3e;
         }
@@ -43,15 +42,39 @@
             border-color: #0b4e3e;
         }
 
-        /* Estilos para a tabela dinâmica */
-        .item-row input {
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            width: 100%;
-            box-sizing: border-box;
+        /* Estilos para inputs */
+        .form-input-label {
+            display: block;
+            font-size: 0.875rem; /* text-sm */
+            font-weight: 500; /* font-medium */
+            color: #374151; /* gray-700 */
+            padding-top: 0.5rem;
         }
 
+        /* Estilo base para todos os inputs do formulário */
+        .form-input {
+            padding: 0.75rem; /* p-3 */
+            border: 1px solid #d1d5db; /* border-gray-300 */
+            border-radius: 0.5rem; /* rounded-lg */
+            width: 100%;
+            transition: all 150ms ease-in-out;
+        }
+        .form-input:focus {
+             box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.5); /* focus:ring-2 focus:ring-green-500 */
+             border-color: #10b981; /* focus:border-green-500 */
+        }
+        
+        /* Estilos para mensagem de erro (substituindo o alert) */
+        #errorMessage {
+            color: #dc2626; /* red-600 */
+            background-color: #fee2e2; /* red-100 */
+            border: 1px solid #f87171; /* red-400 */
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 0.5rem;
+            font-weight: 500;
+        }
+        
         /* Estilos específicos para a visualização de impressão */
         @media print {
             body * {
@@ -76,17 +99,13 @@
             .agp-text-green {
                 color: black !important;
             }
-            /* Garantir que as linhas alternadas sejam visíveis na impressão (se o cliente tiver cor) */
-            .print-area tr:nth-child(even) {
-                background-color: #f0f0f0 !important;
-            }
         }
     </style>
 </head>
 <body class="bg-gray-100 min-h-screen flex flex-col items-center p-4">
 
-    <!-- Cabeçalho (Inspirado no branding) -->
-    <header class="w-full max-w-4xl p-4 mb-6 bg-white rounded-lg shadow-md flex items-center justify-center space-x-4">
+    <!-- Cabeçalho (Branding) -->
+    <header class="w-full max-w-4xl p-4 mb-6 bg-white rounded-xl shadow-md flex items-center justify-center space-x-4">
         <!-- Placeholder para o Logo da Almeida Gomes Paisagismo -->
         <img src="/img/logo-clara.webp" 
              alt="Logo Almeida Gomes Paisagismo" 
@@ -99,15 +118,15 @@
         </div>
     </header>
 
-    <main class="w-full max-w-4xl bg-white rounded-lg shadow-xl p-6 md:p-8">
+    <main class="w-full max-w-4xl bg-white rounded-xl shadow-2xl p-6 md:p-8">
 
         <!-- Área de Controles e Formulário (Oculta na impressão) -->
         <section id="form-section" class="no-print">
-            <div class="mb-6 flex justify-between items-center border-b pb-4">
-                <h2 class="text-2xl font-semibold text-gray-800">Detalhes do Documento</h2>
+            <div class="mb-6 flex flex-col sm:flex-row justify-between items-center border-b pb-4">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4 sm:mb-0">Detalhes do Documento</h2>
                 
                 <!-- Toggle Contrato / Recibo / Orçamento -->
-                <div class="flex p-1 rounded-full bg-gray-200">
+                <div class="flex p-1 rounded-full bg-gray-200 shadow-inner">
                     <button id="toggleContract" onclick="setDocType('contract')" class="px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200">
                         Contrato
                     </button>
@@ -119,6 +138,10 @@
                     </button>
                 </div>
             </div>
+            
+            <!-- Mensagem de erro dinâmica -->
+            <div id="errorMessage" class="hidden"></div>
+
 
             <!-- Formulário -->
             <form id="docForm" class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -126,21 +149,22 @@
                 <div class="md:col-span-2">
                     <h3 class="text-lg font-medium agp-text-green border-b pb-1 mb-3">Dados do Cliente</h3>
                 </div>
-                <input type="text" id="nomeCliente" placeholder="Nome do Cliente/Empresa" class="form-input" required>
+                <!-- REMOVIDO 'REQUIRED' PARA DEIXAR O JAVASCRIPT CONTROLAR A VALIDAÇÃO TOTAL -->
+                <input type="text" id="nomeCliente" placeholder="Nome do Cliente/Empresa" class="form-input"> 
                 <input type="text" id="cpfCliente" placeholder="CPF/CNPJ do Cliente" class="form-input">
-                <input type="text" id="enderecoCliente" placeholder="Endereço Completo do Cliente" class="form-input md:col-span-2" required>
+                <input type="text" id="enderecoCliente" placeholder="Endereço Completo do Cliente" class="form-input md:col-span-2">
 
                 <!-- Informações do Serviço/Orçamento -->
                 <div class="md:col-span-2 mt-4">
                     <h3 class="text-lg font-medium agp-text-green border-b pb-1 mb-3">Título e Prazos</h3>
                 </div>
-                <input type="text" id="tituloServico" placeholder="Título Curto do Documento (Ex: Projeto Paisagístico)" class="form-input md:col-span-2" required>
+                <input type="text" id="tituloServico" placeholder="Título Curto do Documento (Ex: Projeto Paisagístico)" class="form-input md:col-span-2">
                 
-                <label class="block text-sm font-medium text-gray-700">Prazo de Início Estimado:</label>
-                <input type="date" id="dataInicio" class="form-input" required>
+                <label class="form-input-label">Prazo de Início Estimado:</label>
+                <input type="date" id="dataInicio" class="form-input">
                 
-                <label class="block text-sm font-medium text-gray-700">Prazo de Conclusão Estimado:</label>
-                <input type="date" id="dataFim" class="form-input" required>
+                <label class="form-input-label">Prazo de Conclusão Estimado:</label>
+                <input type="date" id="dataFim" class="form-input">
                 
                 <!-- Área de Itens do Orçamento (APENAS para Orçamento) -->
                 <div class="md:col-span-2 mt-4" id="budgetItemsSection">
@@ -166,22 +190,29 @@
                     <div class="flex justify-end mt-4 border-t pt-4">
                         <p class="text-xl font-bold agp-text-green">
                             TOTAL: <span id="displayTotal">R$ 0,00</span>
-                            
                         </p>
                     </div>
                     
                 </div>
                 
-                <!-- Campos Antigos (Contrato/Recibo) -->
-                <textarea id="descricaoServico" rows="4" placeholder="Descrição Detalhada do Serviço (Contrato/Recibo)." class="form-input md:col-span-2 hidden"></textarea>
-                <input type="number" id="valorTotal" step="0.01" placeholder="Valor Total (R$)" class="form-input hidden">
-                <select id="metodoPagamento" class="form-input hidden">
-                    <option value="" disabled selected>Método de Pagamento (Recibo)</option>
-                    <option value="Pix">Pix</option>
-                    <option value="Transferência Bancária">Transferência Bancária</option>
-                    <option value="Dinheiro">Dinheiro</option>
-                    <option value="Cartão de Crédito/Débito">Cartão de Crédito/Débito</option>
-                </select>
+                <!-- Campos Simples (Usados por Contrato/Recibo) -->
+                <textarea id="descricaoServico" rows="4" placeholder="Descrição Detalhada do Serviço (Contrato/Recibo)." class="form-input md:col-span-2"></textarea>
+                
+                <div class="flex flex-col">
+                    <label class="form-input-label" id="labelValorTotal">Valor Total (R$):</label>
+                    <input type="number" id="valorTotal" step="0.01" placeholder="Valor Total (R$)" class="form-input">
+                </div>
+                
+                <div class="flex flex-col">
+                    <label class="form-input-label" id="labelMetodoPagamento">Método de Pagamento (Recibo):</label>
+                    <select id="metodoPagamento" class="form-input">
+                        <option value="" disabled selected>Selecione o Método</option>
+                        <option value="Pix">Pix</option>
+                        <option value="Transferência Bancária">Transferência Bancária</option>
+                        <option value="Dinheiro">Dinheiro</option>
+                        <option value="Cartão de Crédito/Débito">Cartão de Crédito/Débito</option>
+                    </select>
+                </div>
 
                 <!-- Campo Adicional para Contrato / Orçamento -->
                 <div class="md:col-span-2 mt-4" id="contractFields">
@@ -255,6 +286,10 @@
         const displayTotal = document.getElementById('displayTotal');
         const descServicoField = document.getElementById('descricaoServico');
         const valorTotalField = document.getElementById('valorTotal');
+        const labelValorTotal = document.getElementById('labelValorTotal');
+        const labelMetodoPagamento = document.getElementById('labelMetodoPagamento');
+        const errorMessageDiv = document.getElementById('errorMessage');
+
 
         // Conteúdos padrão para o textarea de cláusulas
         const defaultContractClauses = `CLÁUSULA DE MULTAS POR INADIMPLEMENTO:
@@ -284,52 +319,75 @@ Os valores não incluem serviços não especificados na descrição do item.`;
          * Inicializa o estado visual do toggle e adiciona um item inicial no orçamento.
          */
         function initializeToggle() {
-            setDocType('contract', false);
-            addItem(); // Adiciona um item inicial no carregamento
+            setDocType('contract', false); // Configura o estado inicial como Contrato
+            if (items.length === 0) {
+                 addItem(); // Adiciona um item inicial no carregamento para o orçamento
+            }
         }
         
         /**
+         * Exibe uma mensagem de erro na UI.
+         */
+        function displayError(message) {
+            errorMessageDiv.textContent = message;
+            errorMessageDiv.classList.remove('hidden');
+            // Role para o topo da seção do formulário para ver o erro
+            document.getElementById('form-section').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        /**
+         * Oculta a mensagem de erro da UI.
+         */
+        function clearError() {
+            errorMessageDiv.textContent = '';
+            errorMessageDiv.classList.add('hidden');
+        }
+
+
+        /**
          * Altera o tipo de documento a ser gerado ('contract', 'receipt' ou 'budget').
-         * @param {string} type - 'contract', 'receipt' ou 'budget'.
-         * @param {boolean} updateButtonText - Se deve atualizar o texto do botão de geração.
          */
         function setDocType(type, updateButtonText = true) {
             currentDocType = type;
+            clearError();
 
             // 1. Atualiza a aparência dos botões de toggle
             Object.keys(toggleButtons).forEach(key => {
                 toggleButtons[key].className = `px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200 ${type === key ? activeClass : inactiveClass}`;
             });
 
-            // 2. Controla a visibilidade dos campos específicos
             const isBudget = type === 'budget';
             const isReceipt = type === 'receipt';
+            const isContract = type === 'contract';
             
-            // Orçamento vs. Contrato/Recibo
+            // 2. Controla a visibilidade e desabilita os campos
+            
+            // Orçamento: Usa tabela, esconde campos simples
             budgetItemsSection.classList.toggle('hidden', !isBudget);
-            descServicoField.classList.toggle('hidden', isBudget);
-            valorTotalField.classList.toggle('hidden', isBudget);
             
-            // Recibo vs. Contrato/Orçamento
+            // Campos Simples: Usados por Contrato e Recibo. Desabilitados para Orçamento
+            descServicoField.classList.toggle('hidden', isBudget);
+            descServicoField.disabled = isBudget; 
+            
+            valorTotalField.classList.toggle('hidden', isBudget);
+            valorTotalField.disabled = isBudget; 
+            labelValorTotal.classList.toggle('hidden', isBudget);
+            
+            // Recibo: Precisa de pagamento
             paymentSelect.classList.toggle('hidden', !isReceipt);
             paymentSelect.disabled = !isReceipt;
-            if (isReceipt) {
-                 paymentSelect.setAttribute('required', 'required');
-                 valorTotalField.classList.remove('hidden'); // Recibo precisa do valor total manual
-                 descServicoField.classList.remove('hidden'); // Recibo precisa da descrição/título do serviço
-            } else {
-                 paymentSelect.removeAttribute('required');
-                 paymentSelect.value = "";
-            }
+            labelMetodoPagamento.classList.toggle('hidden', !isReceipt);
             
-            // Contrato/Orçamento vs. Recibo
+            // Contrato/Orçamento vs. Recibo: Cláusulas
             contractFieldsDiv.classList.toggle('hidden', isReceipt);
-
+            clausulasAdicionais.disabled = isReceipt; // Desabilita para Recibo
+            
+            
             // 3. Ajusta o título das cláusulas e o conteúdo padrão
             if (isBudget) {
-                additionalClausesTitle.textContent = 'Termos e Condições (Validade de 10 Dias)';
+                additionalClausesTitle.textContent = 'Termos e Condições (Orçamento)';
                 clausulasAdicionais.value = defaultBudgetTerms;
-            } else if (type === 'contract') {
+            } else if (isContract) {
                 additionalClausesTitle.textContent = 'Cláusulas Adicionais (Contrato)';
                 clausulasAdicionais.value = defaultContractClauses;
             }
@@ -340,7 +398,8 @@ Os valores não incluem serviços não especificados na descrição do item.`;
                 generateButton.textContent = `Gerar ${docName} para Visualização`;
             }
             
-            updateTotal(); // Garante que o total seja atualizado ao mudar o tipo (se for orçamento)
+            updateTotal();
+            renderItems(); // Garante que os itens do orçamento estejam visíveis se for o caso
         }
         
         // --- Funções de Manipulação da Tabela de Itens (Orçamento) ---
@@ -349,7 +408,7 @@ Os valores não incluem serviços não especificados na descrição do item.`;
          * Adiciona uma nova linha de item ao formulário.
          */
         function addItem() {
-            const newItemId = items.length;
+            const newItemId = Date.now(); // Usa timestamp para ID único
             items.push({
                 id: newItemId,
                 description: '',
@@ -365,7 +424,6 @@ Os valores não incluem serviços não especificados na descrição do item.`;
          */
         function removeItem(id) {
             items = items.filter(item => item.id !== id);
-            // Re-renderiza para atualizar os IDs visuais
             renderItems(); 
             updateTotal();
         }
@@ -377,11 +435,12 @@ Os valores não incluem serviços não especificados na descrição do item.`;
             itemContainer.innerHTML = items.map((item, index) => {
                 const totalValue = item.quantity * item.unitValue;
                 
+                // IMPORTANTE: Adiciona a classe 'budget-item-field' para validação
                 return `
                     <div class="item-row grid grid-cols-12 gap-2">
-                        <input type="text" id="desc-${item.id}" value="${item.description}" placeholder="Item ${index + 1}: Planta, Mão de Obra, etc." oninput="updateItem(${item.id}, 'description', this.value)" class="col-span-4" required>
-                        <input type="number" id="qty-${item.id}" value="${item.quantity}" min="0.01" step="0.01" oninput="updateItem(${item.id}, 'quantity', parseFloat(this.value) || 0)" class="col-span-2 text-center" required>
-                        <input type="number" id="unit-${item.id}" value="${item.unitValue.toFixed(2)}" min="0.00" step="0.01" oninput="updateItem(${item.id}, 'unitValue', parseFloat(this.value) || 0)" class="col-span-3 text-right" required>
+                        <input type="text" id="desc-${item.id}" value="${item.description}" placeholder="Item ${index + 1}: Planta, Mão de Obra, etc." oninput="updateItem(${item.id}, 'description', this.value)" class="col-span-4 form-input budget-item-field" data-item-type="description">
+                        <input type="number" id="qty-${item.id}" value="${item.quantity}" min="0.01" step="0.01" oninput="updateItem(${item.id}, 'quantity', parseFloat(this.value) || 0)" class="col-span-2 text-center form-input budget-item-field" data-item-type="quantity">
+                        <input type="number" id="unit-${item.id}" value="${item.unitValue.toFixed(2)}" min="0.00" step="0.01" oninput="updateItem(${item.id}, 'unitValue', parseFloat(this.value) || 0)" class="col-span-3 text-right form-input budget-item-field" data-item-type="unitValue">
                         <span id="total-${item.id}" class="col-span-2 text-right p-2 font-medium">${formatCurrency(totalValue)}</span>
                         <button type="button" onclick="removeItem(${item.id})" class="col-span-1 text-red-600 hover:text-red-800 text-lg transition duration-200">
                             &times;
@@ -398,10 +457,15 @@ Os valores não incluem serviços não especificados na descrição do item.`;
         function updateItem(id, key, value) {
             const itemIndex = items.findIndex(item => item.id === id);
             if (itemIndex > -1) {
+                // Atualiza o valor no array
                 items[itemIndex][key] = value;
                 
                 const item = items[itemIndex];
-                const newTotal = item.quantity * item.unitValue;
+                // Certifica-se de que quantidade e valor unitário são números para o cálculo
+                const qty = parseFloat(item.quantity) || 0;
+                const unit = parseFloat(item.unitValue) || 0;
+                
+                const newTotal = qty * unit;
                 items[itemIndex].total = newTotal;
                 
                 // Atualiza o display do V. Total do item
@@ -418,38 +482,113 @@ Os valores não incluem serviços não especificados na descrição do item.`;
             const grandTotal = items.reduce((sum, item) => sum + (item.quantity * item.unitValue), 0);
             displayTotal.textContent = formatCurrency(grandTotal);
             
-            // Oculta o campo valorTotal e define seu valor (para a lógica de Contrato/Recibo, caso necessário)
+            // Atualiza o campo valorTotal para que o getFormData possa usá-lo se necessário
             valorTotalField.value = grandTotal.toFixed(2);
         }
 
         // --- Funções de Auxílio e Geração ---
 
         /**
-         * Coleta os dados do formulário em um objeto.
+         * Coleta os dados do formulário de forma robusta para todos os tipos de documentos.
          */
         function getFormData() {
             const data = {};
-            const formElements = document.getElementById('docForm').elements;
-            for (let i = 0; i < formElements.length; i++) {
-                const element = formElements[i];
-                if (element.id && !element.classList.contains('hidden')) {
-                    data[element.id] = element.value;
-                }
-            }
             
-            // Adiciona a lista de itens e o total calculado para Orçamento
+            // 1. Coleta campos estáticos (todos)
+            const staticFields = ['nomeCliente', 'cpfCliente', 'enderecoCliente', 'tituloServico', 'dataInicio', 'dataFim', 'clausulasAdicionais', 'descricaoServico', 'valorTotal', 'metodoPagamento'];
+            staticFields.forEach(id => {
+                const element = document.getElementById(id);
+                if (element) { 
+                    data[id] = element.value;
+                }
+            });
+
+            // 2. Processamento Específico para Orçamento
             if (currentDocType === 'budget') {
-                data.items = items.map(item => ({
-                    description: document.getElementById(`desc-${item.id}`).value,
-                    quantity: parseFloat(document.getElementById(`qty-${item.id}`).value) || 0,
-                    unitValue: parseFloat(document.getElementById(`unit-${item.id}`).value) || 0,
-                    total: (parseFloat(document.getElementById(`qty-${item.id}`).value) || 0) * (parseFloat(document.getElementById(`unit-${item.id}`).value) || 0)
-                }));
+                // Coleta itens da tabela dinâmica
+                data.items = items.map(item => {
+                    const descElement = document.getElementById(`desc-${item.id}`);
+                    const qtyElement = document.getElementById(`qty-${item.id}`);
+                    const unitElement = document.getElementById(`unit-${item.id}`);
+
+                    const desc = descElement?.value || '';
+                    // Usar o valor do input, garantindo que seja um número ou 0
+                    const qty = parseFloat(qtyElement?.value) || 0; 
+                    const unit = parseFloat(unitElement?.value) || 0;
+
+                    return {
+                        description: desc,
+                        quantity: qty,
+                        unitValue: unit,
+                        total: qty * unit
+                    };
+                }).filter(item => item.description || item.total > 0); // Remove linhas vazias ou de valor zero
+                
+                // Usa o total calculado
                 data.valorTotal = data.items.reduce((sum, item) => sum + item.total, 0).toFixed(2);
             }
 
             return data;
         }
+
+        /**
+         * Realiza a validação manual dos campos obrigatórios.
+         */
+        function validateForm(data) {
+            clearError();
+            
+            // Campos obrigatórios universais para qualquer documento
+            const requiredFields = {
+                nomeCliente: "Nome do Cliente",
+                enderecoCliente: "Endereço do Cliente",
+                tituloServico: "Título do Serviço",
+                dataInicio: "Data de Início Estimada",
+                dataFim: "Data de Conclusão Estimada"
+            };
+
+            for (const key in requiredFields) {
+                if (!data[key] || data[key].trim() === "") {
+                    return `Campo obrigatório não preenchido: ${requiredFields[key]}.`;
+                }
+            }
+            
+            if (currentDocType === 'contract') {
+                if (!data.descricaoServico || data.descricaoServico.trim() === "") {
+                    return "É obrigatório preencher a Descrição Detalhada do Serviço para o Contrato.";
+                }
+                if (!data.valorTotal || parseFloat(data.valorTotal) <= 0) {
+                    return "É obrigatório informar um Valor Total válido (> R$ 0,00) para o Contrato.";
+                }
+            } else if (currentDocType === 'receipt') {
+                if (!data.descricaoServico || data.descricaoServico.trim() === "") {
+                    return "É obrigatório preencher a Descrição Detalhada do Serviço/Referência para o Recibo.";
+                }
+                 if (!data.valorTotal || parseFloat(data.valorTotal) <= 0) {
+                    return "É obrigatório informar um Valor Total válido (> R$ 0,00) para o Recibo.";
+                }
+                if (!data.metodoPagamento || data.metodoPagamento.trim() === "") {
+                    return "É obrigatório selecionar o Método de Pagamento para o Recibo.";
+                }
+            } else if (currentDocType === 'budget') {
+                // Validação de itens para Orçamento
+                if (data.items.length === 0 || data.items.every(item => item.total === 0)) {
+                    return "O Orçamento deve conter pelo menos um item válido (Descrição e Valor Unitário > 0).";
+                }
+                
+                // Valida se todos os itens têm descrição e valor unitário preenchidos
+                for (const item of data.items) {
+                    if (!item.description || item.description.trim() === "") {
+                        return "Por favor, preencha a descrição para todos os itens do orçamento.";
+                    }
+                    if (parseFloat(item.unitValue) <= 0) {
+                         return `O item "${item.description}" deve ter um Valor Unitário maior que R$ 0,00.`;
+                    }
+                }
+            }
+
+            return null; // Nenhuma mensagem de erro, validação OK
+        }
+
 
         /**
          * Formata um valor numérico para o formato monetário Brasileiro (R$ X.XXX,XX).
@@ -465,7 +604,10 @@ Os valores não incluem serviços não especificados na descrição do item.`;
          */
         function formatDate(dateString) {
             if (!dateString) return 'Data não informada';
-            const date = new Date(dateString + 'T00:00:00');
+            // Adiciona 'T00:00:00' para evitar problemas de fuso horário
+            const date = new Date(dateString + 'T00:00:00'); 
+            // Garante que a data seja válida antes de formatar
+            if (isNaN(date.getTime())) return 'Data Inválida';
             return date.toLocaleDateString('pt-BR');
         }
 
@@ -477,7 +619,7 @@ Os valores não incluem serviços não especificados na descrição do item.`;
             const dataInicioFormatada = formatDate(data.dataInicio);
             const dataFimFormatada = formatDate(data.dataFim);
             const dataAtual = formatDate(new Date().toISOString().split('T')[0]);
-
+            
             return `
                 <div class="p-4 md:p-8 space-y-6">
                     <div class="text-center border-b pb-4">
@@ -486,7 +628,6 @@ Os valores não incluem serviços não especificados na descrição do item.`;
                         <p class="text-sm text-gray-600">Documento gerado em: ${dataAtual}</p>
                     </div>
 
-                    <!-- ... (Restante do Contrato HTML, usando data.descricaoServico e data.valorTotal) ... -->
                     <p class="text-sm text-justify leading-relaxed">
                         Pelo presente instrumento particular, de um lado, a Contratada <strong>${companyInfo.name}</strong>, CNPJ n. ${companyInfo.cnpj}, com sede em ${companyInfo.address}, neste ato representada por ${companyInfo.representative}, e, de outro lado, o Contratante <strong>${data.nomeCliente}</strong>, CPF/CNPJ n. ${data.cpfCliente || 'Não informado'}, residente e domiciliado(a) em ${data.enderecoCliente}, doravante denominado(a) simplesmente Contratante.
                     </p>
@@ -494,7 +635,7 @@ Os valores não incluem serviços não especificados na descrição do item.`;
                     <h3 class="font-bold agp-text-green text-lg border-b mt-4">CLÁUSULA PRIMEIRA - DO OBJETO</h3>
                     <p class="text-sm text-justify leading-relaxed">
                         O presente Contrato tem por objeto a prestação de serviços de **${data.tituloServico}**, conforme a descrição detalhada a seguir:<br>
-                        ${data.descricaoServico.split('\n').map(p => `<span>${p}</span><br>`).join('')}
+                        <div class="border border-gray-200 p-4 rounded-lg bg-gray-50 whitespace-pre-line">${data.descricaoServico}</div>
                     </p>
 
                     <h3 class="font-bold agp-text-green text-lg border-b mt-4">CLÁUSULA SEGUNDA - PRAZOS E VALOR</h3>
@@ -518,12 +659,12 @@ Os valores não incluem serviços não especificados na descrição do item.`;
                         <div>
                             <div class="border-t border-gray-700 w-64 pt-2"></div>
                             <p class="font-semibold text-sm">${companyInfo.name}</p>
-                            <p class="text-xs">Contratada</p>
+                            <p class="text-xs">Assinatura da Contratada</p>
                         </div>
                         <div>
                             <div class="border-t border-gray-700 w-64 pt-2"></div>
                             <p class="font-semibold text-sm">${data.nomeCliente}</p>
-                            <p class="text-xs">Contratante</p>
+                            <p class="text-xs">Assinatura do Contratante</p>
                         </div>
                     </div>
                 </div>
@@ -540,22 +681,23 @@ Os valores não incluem serviços não especificados na descrição do item.`;
             const dataAtual = new Date();
             const dataAtualFormatada = formatDate(dataAtual.toISOString().split('T')[0]);
             
-            // Validade: Adiciona 10 dias corridos
             const validadeDate = new Date(dataAtual);
             validadeDate.setDate(dataAtual.getDate() + 10);
             const validadeFormatada = validadeDate.toLocaleDateString('pt-BR');
 
             // Geração da Tabela de Itens
-            const itemRows = data.items.filter(item => item.total > 0 || item.description).map((item, index) => {
+            const itemRows = data.items.map((item, index) => {
                 const totalFormatado = formatCurrency(item.total);
-                const unitFormatado = formatCurrency(item.unitValue).replace('R$', '').trim();
+                // Remove R$ do valor unitário para ficar mais limpo na tabela
+                const unitFormatado = formatCurrency(item.unitValue).replace('R$', '').trim(); 
+                // Linhas com cores alternadas
                 const rowClass = index % 2 === 0 ? 'bg-gray-50' : 'bg-white';
                 
                 return `
                     <tr class="${rowClass} border-b text-sm">
                         <td class="w-10 text-center py-2">${index + 1}</td>
                         <td class="w-1/2 p-2">${item.description || '-'}</td>
-                        <td class="w-10 text-center p-2">${item.quantity.toLocaleString('pt-BR')}</td>
+                        <td class="w-10 text-center p-2">${item.quantity.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</td>
                         <td class="w-1/6 text-right p-2">${unitFormatado}</td>
                         <td class="w-1/6 text-right p-2 font-semibold">${totalFormatado}</td>
                     </tr>
@@ -638,11 +780,6 @@ Os valores não incluem serviços não especificados na descrição do item.`;
             const dataInicioFormatada = formatDate(data.dataInicio);
             const dataAtual = formatDate(new Date().toISOString().split('T')[0]);
 
-            if (!data.metodoPagamento) {
-                return '<p class="text-center text-red-600">ERRO: O campo "Método de Pagamento" é obrigatório para gerar o Recibo.</p>';
-            }
-            
-            // ... (Restante do Recibo HTML, usando data.descricaoServico e data.valorTotal) ...
             return `
                 <div class="p-4 md:p-8 space-y-6">
                     <div class="text-center border-b pb-4">
@@ -663,6 +800,7 @@ Os valores não incluem serviços não especificados na descrição do item.`;
 
                     <ul class="list-disc ml-5 text-sm space-y-1">
                         <li><strong>Serviço:</strong> ${data.tituloServico}</li>
+                        <li><strong>Detalhes:</strong> ${data.descricaoServico}</li>
                         <li><strong>Método de Pagamento:</strong> ${data.metodoPagamento}</li>
                         <li><strong>Data do Recibo:</strong> ${dataAtual}</li>
                     </ul>
@@ -677,10 +815,17 @@ Os valores não incluem serviços não especificados na descrição do item.`;
                         Site: ${companyInfo.site}
                     </p>
 
-                    <div class="pt-12 text-center">
-                        <div class="border-t border-gray-700 w-64 mx-auto pt-2"></div>
-                        <p class="font-semibold text-sm">${companyInfo.representative}</p>
-                        <p class="text-xs">Assinatura do Responsável (Almeida Gomes Paisagismo)</p>
+                    <div class="flex justify-around pt-12 text-center">
+                        <div>
+                            <div class="border-t border-gray-700 w-64 pt-2"></div>
+                            <p class="font-semibold text-sm">${companyInfo.name}</p>
+                            <p class="text-xs">Assinatura da Contratada</p>
+                        </div>
+                        <div>
+                            <div class="border-t border-gray-700 w-64 pt-2"></div>
+                            <p class="font-semibold text-sm">${data.nomeCliente}</p>
+                            <p class="text-xs">Assinatura do Contratante</p>
+                        </div>
                     </div>
                 </div>
             `;
@@ -692,25 +837,19 @@ Os valores não incluem serviços não especificados na descrição do item.`;
          */
         function renderPreview() {
             const data = getFormData();
-            const form = document.getElementById('docForm');
-
-            // Validação simples do formulário
-            if (!form.checkValidity()) {
-                form.reportValidity();
+            
+            // 1. Validação manual antes de gerar
+            const validationError = validateForm(data);
+            if (validationError) {
+                displayError(validationError);
+                // Permanece na seção do formulário
+                document.getElementById('form-section').classList.remove('hidden');
+                document.getElementById('preview-section').classList.add('hidden');
                 return;
             }
             
-            // Validação específica para orçamento
-            if (currentDocType === 'budget' && items.length === 0) {
-                 // Cria um alerta de modal personalizado (não usando alert())
-                 alert('Por favor, adicione pelo menos um item ao orçamento.');
-                 return;
-            }
-            if (currentDocType === 'budget' && data.items.every(item => item.total === 0)) {
-                 alert('O valor total do orçamento não pode ser zero. Verifique as quantidades e valores unitários.');
-                 return;
-            }
-
+            // Se a validação passou, limpa o erro e continua
+            clearError();
 
             let outputHTML = '';
             if (currentDocType === 'contract') {
@@ -732,6 +871,7 @@ Os valores não incluem serviços não especificados na descrição do item.`;
         function hidePreview() {
             document.getElementById('preview-section').classList.add('hidden');
             document.getElementById('form-section').classList.remove('hidden');
+            clearError();
         }
 
         /**
@@ -743,12 +883,6 @@ Os valores não incluem serviços não especificados na descrição do item.`;
 
         // Inicialização: configura o estado inicial do toggle e itens
         window.onload = initializeToggle;
-
-        // Adiciona classes de estilo dinâmico aos inputs
-        document.querySelectorAll('.form-input').forEach(input => {
-            input.classList.add('p-3', 'border', 'border-gray-300', 'rounded-lg', 'focus:ring-2', 'focus:ring-green-500', 'focus:border-green-500', 'w-full', 'transition-colors');
-        });
-
     </script>
 </body>
 </html>
