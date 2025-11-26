@@ -123,8 +123,8 @@
                     <option value="Cartão de Crédito/Débito">Cartão de Crédito/Débito</option>
                 </select>
 
-                <input type="date" id="dataInicio" class="form-input" required>
-                <input type="date" id="dataFim" class="form-input" required>
+                <input type="date" id="dataInicio" placeholder="Prazo de Início" class="form-input" required>
+                <input type="date" id="dataFim" placeholder="Prazo de Conclusão Estimado" class="form-input" required>
 
                 <!-- Campo Adicional para Contrato -->
                 <div class="md:col-span-2 mt-4" id="contractFields">
@@ -285,6 +285,7 @@ Qualquer parte poderá rescindir o contrato mediante aviso prévio por escrito d
             return `
                 <div class="p-4 md:p-8 space-y-6">
                     <div class="text-center border-b pb-4">
+                        <img src="/img/logo-clara.webp" alt="Logo Almeida Gomes Paisagismo" class="w-16 h-16 rounded-full object-cover" onerror="this.onerror=null; this.src='/img/logo-clara.webp';">
                         <h1 class="text-2xl font-bold agp-text-green">CONTRATO DE PRESTAÇÃO DE SERVIÇOS</h1>
                         <p class="text-sm text-gray-600">Documento gerado em: ${dataAtual}</p>
                     </div>
