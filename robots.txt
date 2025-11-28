@@ -1,4 +1,4 @@
-Sitemap: https://www.almeidagomespaisagismo.com.br/sitemap.xml
+Sitemap: https://almeidagomespaisagismo.com.br/sitemap.xml
 
 User-agent: *
 Allow: /
